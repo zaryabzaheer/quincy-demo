@@ -1842,3 +1842,7 @@ h6 { font-size: 0.875rem; }
 @media screen and (max-width: 479px) {
  #w-node-_87edb120-f656-28fb-68f9-b22a2eafdad6-2160ff2e { justify-self: end; }
  }
+
+ .embla.is-case-slider{
+  width: 200px !important;
+ }
