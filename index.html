@@ -1825,7 +1825,13 @@
     <script defer="" src="js/gsap.min.js"></script>
     <script defer="" src="js/Flip.min.js"></script>
     <script defer="" src="js/ScrollTrigger.min.js"></script>
-    <script defer="" src="js/embla-carousel.umd.min.js"></script>
+    <!-- <script defer="" src="js/embla-carousel.umd.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/embla-carousel@8.6.0/embla-carousel.umd.js"></script>
+    <script>
+      const emblaNode = document.querySelector('.embla');
+      const emblaApi = EmblaCarousel(emblaNode, { loop: true });
+    </script>
+    
     <script defer="" src="js/glightbox.min.js"></script>
     <script defer="" src="js/main.js"></script>
 </body>
