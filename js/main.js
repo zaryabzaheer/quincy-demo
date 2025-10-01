@@ -3649,3 +3649,32 @@ document.addEventListener("DOMContentLoaded", (event) => {
   /*=====  End of About page scripts  ======*/
 
 });
+
+
+
+const embla = EmblaCarousel(rootEl, {
+  align: 'center',
+  loop: false,                   // or true if you need infinite
+  containScroll: false,          // or 'keepSnaps'; avoid 'trimSnaps' here
+  slidesToScroll: 1,             // not 'auto' for variable widths
+  startIndex: initialIndex ?? 0, // e.g., indexOf('PAKISTAN')
+  watchResize: true,
+  watchSlides: true,
+  watchDrag: true,
+  breakpoints: {
+    // make sure you NEVER switch align to 'start' on small screens
+    '(max-width: 1024px)': { align: 'center', containScroll: false }
+  }
+});
+
+// keep the current snap centered after any re-init/resize
+const keepCenter = () => embla.scrollTo(embla.selectedScrollSnap(), true);
+embla.on('init', keepCenter);
+embla.on('reInit', keepCenter);
+embla.on('resize', keepCenter);
+
+// if you programmatically rebuild: preserve index
+function safeReinit() {
+  const idx = embla.selectedScrollSnap();
+  embla.reInit({ startIndex: idx, align: 'center', containScroll: false });
+}
