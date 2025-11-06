@@ -1102,6 +1102,7 @@ figcaption { text-align: center; margin-top: 0.25rem; }
 .intro_inner { background-color: var(--body--background); padding-top: 10.875rem; }
 .intro_content { z-index: 2; color: var(--dark-theme--text); mix-blend-mode: difference; padding-bottom: 4.3125rem; padding-left: 7.25rem; padding-right: 7.25rem; position: relative; }
 .about_second-part { z-index: 2; position: relative; }
+
 .intro_image-overlay { background-image: linear-gradient(
     180deg,
     transparent 60%,
